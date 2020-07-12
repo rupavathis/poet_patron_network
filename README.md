@@ -1,24 +1,11 @@
-# README
+# Poet Patron Network
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo contains code for showcasing demo of a visualisation tool prototype for Irish bardic poetry showing relationship between the poets, the poems and their patrons. It also links them to their location and additional information such as motifs and categoris of poems. The data for this project is taken from the Bardic Poetry Database https://bardic.celt.dias.ie/. This project  builds visualisation mechansim to poet patronage network, and also provides admin panel to perform operations on the database. 
 
-Things you may want to cover:
+The tech-stack used to build this project are below:
 
-* Ruby version
+* Ruby on Rails Backend (version 2.6.6/version 5.2.4.3)
+* RESTful API / ActiveRecord ORM
+* MySQL database (version 14.4)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ReactJS (node version 12.16.1) with d3.js
