@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2020_07_06_192410) do
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "category_poems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "category_poems", force: :cascade do |t|
     t.bigint "category_id"
     t.bigint "poem_id"
     t.datetime "created_at", null: false
@@ -27,13 +30,13 @@ ActiveRecord::Schema.define(version: 2020_07_06_192410) do
     t.index ["poem_id"], name: "index_category_poems_on_poem_id"
   end
 
-  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "motif_poems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "motif_poems", force: :cascade do |t|
     t.bigint "motif_id"
     t.bigint "poem_id"
     t.datetime "created_at", null: false
@@ -42,13 +45,13 @@ ActiveRecord::Schema.define(version: 2020_07_06_192410) do
     t.index ["poem_id"], name: "index_motif_poems_on_poem_id"
   end
 
-  create_table "motifs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "motifs", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "patron_poems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "patron_poems", force: :cascade do |t|
     t.bigint "patron_id"
     t.bigint "poem_id"
     t.datetime "created_at", null: false
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_192410) do
     t.index ["poem_id"], name: "index_patron_poems_on_poem_id"
   end
 
-  create_table "patrons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "patrons", force: :cascade do |t|
     t.string "name"
     t.bigint "location_id"
     t.datetime "created_at", null: false
@@ -65,7 +68,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_192410) do
     t.index ["location_id"], name: "index_patrons_on_location_id"
   end
 
-  create_table "poem_poets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "poem_poets", force: :cascade do |t|
     t.bigint "poet_id"
     t.bigint "poem_id"
     t.datetime "created_at", null: false
@@ -74,14 +77,14 @@ ActiveRecord::Schema.define(version: 2020_07_06_192410) do
     t.index ["poet_id"], name: "index_poem_poets_on_poet_id"
   end
 
-  create_table "poems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "poems", force: :cascade do |t|
     t.string "name"
     t.string "poemText"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "poets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "poets", force: :cascade do |t|
     t.string "name"
     t.bigint "location_id"
     t.datetime "created_at", null: false
