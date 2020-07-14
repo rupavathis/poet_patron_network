@@ -1,5 +1,6 @@
 # Poet Patron Network
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ede8b3ff7dc40bbbf68e3f613ec6379)](https://app.codacy.com/manual/rupavathis/poet_patron_network?utm_source=github.com&utm_medium=referral&utm_content=rupavathis/poet_patron_network&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/rupavathis/poet_patron_network.svg?branch=master)](https://travis-ci.com/rupavathis/poet_patron_network)
 
 This repo contains code for showcasing demo of a visualisation tool prototype for Irish bardic poetry showing relationship between the poets, the poems and their patrons. It also links them to their location and additional information such as motifs and categoris of poems. The data for this project is taken from the Bardic Poetry Database https://bardic.celt.dias.ie/. This project  builds visualisation mechansim to poet patronage network, and also provides admin panel to perform operations on the database. 
